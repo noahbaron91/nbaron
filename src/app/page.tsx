@@ -10,7 +10,12 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <p className='text-center'>Simplifying machine learning</p>
+      <p className='text-center'>
+        making the internet fun again.{' '}
+        <a href='/cofounder' className='text-[#0000FF]'>
+          looking for cofounders
+        </a>
+      </p>
     </main>
   );
 }
