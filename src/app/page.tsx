@@ -30,6 +30,7 @@ export default function Home() {
                 onlyvisitonce.com
               </a>
             </li>
+            <li>More coming soon...</li>
           </ul>
         </div>
 
