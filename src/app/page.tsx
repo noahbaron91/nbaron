@@ -30,6 +30,16 @@ export default function Home() {
                 onlyvisitonce.com
               </a>
             </li>
+            <li>
+              A website that sends you to a random page on the internet:{' '}
+              <a
+                className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                href='https://visitarandomwebsite.com'
+                target='_blank'
+              >
+                visitarandomwebsite.com
+              </a>
+            </li>
             <li>More coming soon...</li>
           </ul>
         </div>
