@@ -14,8 +14,9 @@ export default function Home() {
       <Header />
       <section className='mx-8 md:mx-auto sm:mx-24 md:max-w-[700px] flex flex-col gap-3'>
         <p>
-          Hi, I{"'"}m Noah! I{"'"}m a software engineer and designer. I like to
-          build things that are fun, useful, and make the world a better place
+          Hi, I{"'"}m Noah! I{"'"}m a software engineer and designer. <br />I
+          like to build things that are fun, useful, and make the world a better
+          place.
         </p>
         <div className='flex flex-col gap-1'>
           <h3 className='font-bold'>Projects:</h3>
