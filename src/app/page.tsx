@@ -40,7 +40,7 @@ export default function Home() {
                 visitarandomwebsite.com
               </a>
             </li>
-            <li>More coming soon...</li>
+            <li className='font-semibold'>More coming soon...</li>
           </ul>
         </div>
 
