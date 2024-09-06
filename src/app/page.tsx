@@ -45,13 +45,15 @@ export default function Home() {
         </div>
 
         <p>
-          enjoy my work?{' '}
+          I have more ambitious ideas I want to build, but{' '}
+          <strong>I{"'"}m simply lacking the funds to create them.</strong> If
+          you like what I{"'"}m doing and want to help me out, you can{' '}
           <a
             className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
             href='https://buymeacoffee.com/noahbaron'
             target='_blank'
           >
-            buy me a coffee!
+            buy me a coffee
           </a>
         </p>
       </section>
