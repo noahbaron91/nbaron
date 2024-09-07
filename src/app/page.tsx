@@ -45,7 +45,7 @@ export default function Home() {
         </div>
 
         <p>
-          If you like what I{"'"}m doing and want to support me, you can{' '}
+          If you appreciate my work and want to support me, you can{' '}
           <a
             className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
             href='https://buymeacoffee.com/noahbaron'
