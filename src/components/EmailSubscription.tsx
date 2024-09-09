@@ -149,12 +149,32 @@ export function EmailSubscription() {
     'idle' | 'fetching' | 'success' | 'error'
   >('idle');
 
-  function handleSubmit() {
+  async function handleSubmit() {
     setFetchingState('fetching');
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/email', {
+        body: JSON.stringify({ email }),
+        method: 'POST',
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit email');
+      }
+
+      setFetchingState('success');
+
+      setTimeout(() => {
+        setFetchingState('idle');
+        setEmail('');
+      }, 2500);
+    } catch (error) {
       setFetchingState('error');
-    }, 1500);
+
+      setTimeout(() => {
+        setFetchingState('idle');
+      }, 2500);
+    }
   }
 
   const handleEmailChange: React.ChangeEventHandler<HTMLInputElement> = (
@@ -176,6 +196,7 @@ export function EmailSubscription() {
         placeholder='example@acme.inc'
         onChange={handleEmailChange}
         value={email}
+        name='email'
       />
       <div className=''>
         <button

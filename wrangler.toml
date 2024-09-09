@@ -8,6 +8,6 @@ bucket = './dist'
 
 [[d1_databases]]
 binding = "DB"
-database_name = ""
-database_id = ""
+database_name = "nbaron"
+database_id = "5d145fc9-13a4-4d40-8b65-40e0b46da06e"
 preview_database_id = "DB" 
