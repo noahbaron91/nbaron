@@ -1,5 +1,5 @@
 ---
-import Card from '../components/Card.astro';
+import { Card } from '../components/Card';
 import { EmailSubscription } from '../components/EmailSubscription';
 ---
 
@@ -68,7 +68,7 @@ import { EmailSubscription } from '../components/EmailSubscription';
           </h4>
           <p class='text-gray-200'>No spam guaranteed</p>
         </div>
-        <EmailSubscription />
+        <EmailSubscription client:load />
       </section>
     </div>
     <footer class='flex items-center gap-3 px-7'>

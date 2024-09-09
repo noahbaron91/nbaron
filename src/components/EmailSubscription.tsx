@@ -3,20 +3,25 @@ import { useState } from 'react';
 function ChevronRightIcon() {
   return (
     <svg
-      width='18'
-      height='18'
-      viewBox='0 0 18 18'
+      width='20'
+      height='21'
+      viewBox='0 0 20 21'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
       <path
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M6.21967 3.96967C6.51256 3.67678 6.98744 3.67678 7.28033 3.96967L11.7803 8.46967C12.0732 8.76256 12.0732 9.23744 11.7803 9.53033L7.28033 14.0303C6.98744 14.3232 6.51256 14.3232 6.21967 14.0303C5.92678 13.7374 5.92678 13.2626 6.21967 12.9697L10.1893 9L6.21967 5.03033C5.92678 4.73744 5.92678 4.26256 6.21967 3.96967Z'
-        fill='white'
+        d='M6.91107 4.91009C7.23651 4.58466 7.76414 4.58466 8.08958 4.91009L13.0896 9.91009C13.415 10.2355 13.415 10.7632 13.0896 11.0886L8.08958 16.0886C7.76414 16.414 7.23651 16.414 6.91107 16.0886C6.58563 15.7632 6.58563 15.2355 6.91107 14.9101L11.3218 10.4993L6.91107 6.0886C6.58563 5.76317 6.58563 5.23553 6.91107 4.91009Z'
+        fill='#FAFAF9'
       />
     </svg>
   );
+}
+
+function checkIfIsValidEmail(email: string) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 }
 
 export function EmailSubscription() {
@@ -26,23 +31,30 @@ export function EmailSubscription() {
     console.log('submitting email', email);
   }
 
+  const isValidEmail = checkIfIsValidEmail(email);
+
   return (
-    <div className='relative'>
+    <div className='block lg:flex lg:gap-2'>
       <input
         className='lg:w-80 lg:rounded-lg lg:h-[60px] lg:px-4 focus:outline-none rounded px-3 py-3 border border-gray-400 bg-gray-600 w-full'
         placeholder='example@acme.inc'
         onChange={(e) => setEmail(e.target.value)}
         value={email}
       />
-      <button
-        onClick={handleSubmit}
-        className='lg:absolute mt-2 lg:mt-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex w-full lg:items-center lg:justify-center lg:right-5 lg:w-7 lg:h-7 text-center text-gray-50 bg-gray-800 border border-gray-400 bg-gray-500 rounded py-3'
-      >
-        <span className='lg:hidden'>Submit</span>
-        <div className='lg:block hidden'>
+      <div className=''>
+        <button
+          onClick={handleSubmit}
+          className='mt-2 lg:hidden lg:mt-0 w-full text-center text-gray-50 bg-gray-800 border border-gray-400 bg-gray-500 rounded py-3'
+        >
+          Submit
+        </button>
+        <button
+          onClick={handleSubmit}
+          className={`items-center h-[60px] w-[60px] lg:flex justify-center hidden ${isValidEmail ? 'bg-gray-500' : 'bg-gray-600'} transition-colors border border-gray-400 rounded-lg`}
+        >
           <ChevronRightIcon />
-        </div>
-      </button>
+        </button>
+      </div>
     </div>
   );
 }
