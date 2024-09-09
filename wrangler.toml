@@ -1,0 +1,13 @@
+name = "visitarandomwebsite"
+main = "dist/_worker.js/index.js"
+compatibility_flags = [ "nodejs_compat" ]
+compatibility_date = "2024-03-29"
+
+[site]
+bucket = './dist'
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nbaron"
+database_id = "5d145fc9-13a4-4d40-8b65-40e0b46da06e"
+preview_database_id = "DB" 

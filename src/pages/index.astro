@@ -1,0 +1,93 @@
+---
+import { Card } from '../components/Card';
+import { EmailSubscription } from '../components/EmailSubscription';
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='color-scheme' content='dark' />
+    <title>nbaron</title>
+  </head>
+  <body class='pt-7 pb-5 min-h-screen flex flex-col justify-between'>
+    <div class='flex flex-col flex-1 pb-12'>
+      <a class='px-7 text-gray-100 font-medium text-2xl' href='/'>nbaron</a>
+      <div class='flex flex-col justify-between flex-1'>
+        <main class='flex flex-col gap-0 mx-7 md:mx-auto md:w-3/4'>
+          <section class='mt-14'>
+            <div class='flex flex-col gap-4 text-gray-900'>
+              <h1 class='text-2xl text-gray-900 font-medium md:text-4xl'>
+                Hi, I'm Noah
+              </h1>
+              <div class='flex flex-col text-lg'>
+                <p>I'm a software engineer and designer.</p>
+                <p>
+                  I like to build things that are fun, useful, and make the
+                  world a better place.
+                </p>
+              </div>
+              <p class='text-lg'>
+                Want to support me?{' '}
+                <a
+                  class='underline'
+                  target='_blank'
+                  href='https://buymeacoffee.com/noahbaron'
+                >
+                  Buy me a coffee
+                </a>
+              </p>
+            </div>
+          </section>
+          <section class='mt-8 flex-col flex gap-2'>
+            <h3 class='text-lg text-gray-950 font-medium'>Projects</h3>
+            <div class='grid grid-cols-1 gap-2 lg:gap-4 sm:grid-cols-2'>
+              <Card
+                domain='visitarandomwebsite.com'
+                githubURL='https://github.com/noahbaron91/visitarandomwebsite'
+                title='A website that sends you to a random page on the internet'
+                url='https://visitarandomwebsite.com/'
+                client:load
+              />
+              <Card
+                domain='onlyvisitonce.com'
+                githubURL='https://github.com/noahbaron91/onlyvisitonce'
+                title='A website you can only visit once'
+                url='https://onlyvisitonce.com/'
+                client:load
+              />
+            </div>
+          </section>
+        </main>
+      </div>
+      <section
+        class='mx-7 md:mx-auto md:w-3/4 mt-8 lg:flex-row lg:justify-between bg-gray-900 lg:items-center border flex flex-col gap-4 px-7 py-7 border-gray-500 bg-gray-600 rounded-xl'
+      >
+        <div class='flex flex-col gap-1'>
+          <h4 class='text-gray-50 font-medium text-lg'>
+            Get notified when I launch a new project
+          </h4>
+          <p class='text-gray-200'>No spam guaranteed</p>
+        </div>
+        <EmailSubscription client:load />
+      </section>
+    </div>
+    <footer class='flex items-center gap-3 px-7'>
+      <a
+        href='https://github.com/noahbaron91'
+        target='_blank'
+        class='text-gray-200'
+      >
+        GitHub
+      </a>
+      <a
+        href='https://x.com/noahthebaron'
+        target='_blank'
+        class='text-gray-200'
+      >
+        Twitter
+      </a>
+    </footer>
+  </body>
+</html>
