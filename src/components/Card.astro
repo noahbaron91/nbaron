@@ -11,23 +11,23 @@ const { domain, githubURL, title, url } = Astro.props;
 
 <button
   onclick=`window.open(${url}, '_blank')`
-  class='bg-gray-100 hover:bg-gray-200 transition-colors text-left lg:gap-20 items-center flex lg:items-center gap-1 border border-gray-200 justify-between rounded-lg px-7 py-4 lg:h-26'
+  class='bg-gray-600 transition-colors text-left lg:gap-20 items-center flex lg:items-center gap-1 border border-gray-500 justify-between rounded-lg px-7 py-4 lg:h-26'
 >
   <div class='flex flex-col'>
-    <h4 class='text-gray-950 lg:text-lg'>{title}</h4>
-    <p class='text-gray-500 text-left'>{domain}</p>
+    <h4 class='text-gray-100 lg:text-lg'>{title}</h4>
+    <p class='text-gray-300 text-left'>{domain}</p>
   </div>
   <a
     onclick='(e) => e.stopPropagation()'
     href={githubURL}
-    class='w-8 h-8 flex items-center justify-center self-end hover:fill-gray-900 fill-gray-500'
+    class='w-8 h-8 flex items-center justify-center self-end hover:fill-gray-400 fill-gray-300'
     target='_blank'
   >
     <svg
       width='24'
       height='24'
       viewBox='0 0 24 24'
-      fill='none'
+      fill='inherit'
       xmlns='http://www.w3.org/2000/svg'
       class='fill-inherit'
     >

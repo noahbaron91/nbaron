@@ -29,14 +29,14 @@ export function EmailSubscription() {
   return (
     <div className='relative'>
       <input
-        className='lg:w-80 lg:rounded-lg lg:h-[60px] lg:px-4 focus:outline-none rounded px-3 py-3 border border-gray-400 bg-gray-50 w-full'
+        className='lg:w-80 lg:rounded-lg lg:h-[60px] lg:px-4 focus:outline-none rounded px-3 py-3 border border-gray-400 bg-gray-600 w-full'
         placeholder='example@acme.inc'
         onChange={(e) => setEmail(e.target.value)}
         value={email}
       />
       <button
         onClick={handleSubmit}
-        className='lg:absolute mt-2 lg:mt-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex w-full lg:items-center lg:justify-center lg:right-5 lg:w-7 lg:h-7 text-center text-gray-50 bg-gray-800 border border-gray-600 rounded-lg py-3'
+        className='lg:absolute mt-2 lg:mt-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex w-full lg:items-center lg:justify-center lg:right-5 lg:w-7 lg:h-7 text-center text-gray-50 bg-gray-800 border border-gray-400 bg-gray-500 rounded py-3'
       >
         <span className='lg:hidden'>Submit</span>
         <div className='lg:block hidden'>
