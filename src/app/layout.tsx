@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='px-7 pt-7 pb-3'>{children}</body>
+      <body className='pt-7 pb-3 min-h-screen flex flex-col justify-between'>
+        {children}
+      </body>
     </html>
   );
 }
